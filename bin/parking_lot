@@ -1,0 +1,48 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/lot'
+
+def process!(input)
+  if input.length != 0
+    input = File.read(input[0])
+    input = input.split("\n")
+    input_type = 'file'
+  else
+    input_type = 'interactive'
+  end
+
+  lot = nil
+  count = 0
+  loop do
+
+    case input_type
+    when 'file'
+      break if count >= input.size
+      input_row = input[count]
+      count += 1
+    when 'interactive'
+      input_row = gets.chomp
+      break if input_row == 'exit'
+    end
+
+    input_row_scliced = input_row.split(/\s/)
+    command = input_row_scliced[0]
+    if command == 'create_parking_lot'
+      total_slots = input_row_scliced[1]
+      lot = Lot.new(total_slots)
+    else
+      lot.send(command, *([input_row_scliced[1], input_row_scliced[2]].compact))
+    end
+
+  end
+end
+
+def run
+  begin
+    process!(ARGV)
+  rescue StandardError => e
+    puts "Input Error - #{e}"
+  end
+end
+
+run

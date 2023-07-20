@@ -1,3 +1,32 @@
+# Input
+````
+bin/parking_lot input.txt
+````
+
+````
+bin/parking_lot
+
+create_parking_lot 10
+park MB-00-BB-1111 Green
+park MB-00-HH-2222 Pink
+park MB-00-BB-3333 Green
+park MB-00-HH-4444 Red
+park MB-00-HH-5555 Yellow
+park MB-00-HH-6666 Black
+park MB-00-HH-7777 Blue
+park MB-00-HH-8888 Black
+leave 6
+leave 7
+status
+park CG-01-HH-0000 Purple
+park CG-01-HH-9999 Purple
+registration_numbers_for_cars_with_color Green
+slot_numbers_for_cars_with_color Green
+slot_number_for_registration_number MB-00-HH-5555
+slot_number_for_registration_number MB-00-HH-2222
+````
+
+
 # parking_lot
 
 -  Design a parking lot which can hold n cars of different color and different registration numbers.
