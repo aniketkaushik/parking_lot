@@ -54,6 +54,4 @@ slot_number_for_registration_number MB-00-HH-2222
 - After you are done, zip the folder of parking_lot and send us.
 - Also, include an approach.txt, write your thoughts or approach, how you have solved the problem
 - NOTE: we need to check the local Git commits to understand your coding style better.
-- you can submit the code on dhruvalm@mangospring.com.
-- Feel free to connect with me on 09227499351 if you have any queries.
 
